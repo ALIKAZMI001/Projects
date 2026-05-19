@@ -1,0 +1,8 @@
+div {
+    width: 100px;
+    height:100px;
+     /*display: inline;*/
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}

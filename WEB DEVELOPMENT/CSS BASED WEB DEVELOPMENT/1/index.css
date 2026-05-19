@@ -1,0 +1,111 @@
+
+p {
+
+    color : black ;
+}
+
+button {
+
+    color : #ffff00 ;
+    background-color: black;
+}
+
+body {
+    background-color : rgb(191, 34, 115);
+ }
+
+#imali {
+    color: rgb(204, 255, 0);
+}
+
+#ali {
+    color: blue;
+}
+
+.myclass {
+    color: aqua;
+}
+
+.myclass1 {
+    color: rgb(255, 0, 0);
+    background-color: blue;
+    }
+
+#fd {
+    text-align: center;
+}
+
+pre {
+    text-align: end; 
+}
+
+h1{
+    
+        text-align: center;
+        text-decoration:blue underline;
+    
+}
+
+a {
+    text-decoration: none; 
+}
+
+#one {
+    font-weight: lighter;
+    font-family: arial;
+}
+
+#two {
+    font-weight: 900;
+}
+
+.nmbertwo {
+
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    font-family: arial;
+
+}
+
+#a {
+    
+    font-size:25px;
+    text-transform: capitalize;
+}
+
+#b {
+    font-size:35px;
+    line-height: 34px;
+}
+
+#c {
+    font-size:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* {
+    color: blue;
+}
+
+
+/ h2 {
+    color : blue ;
+    background-color:rgb(0, 255, 242) ;
+}
+
+/ h1,h2 {
+    color : blue ;
+    background-color:rgb(0, 255, 242) ;
+}
