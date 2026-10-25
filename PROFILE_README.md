@@ -1,43 +1,47 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,50:302B63,100:24243e&height=250&section=header&text=Ali%20Kazmi&fontSize=80&fontColor=ffffff&fontAlignY=40&desc=AI%20%26%20Machine%20Learning%20Engineer&descAlignY=60&descSize=26&animation=fadeIn&stroke=6EE7F7&strokeWidth=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,40:302B63,100:24243e&height=260&section=header&text=Ali%20Kazmi&fontSize=86&fontColor=ffffff&fontAlignY=38&desc=Autonomous%20AI%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20LLM%20Systems&descAlignY=60&descSize=26&animation=fadeIn&stroke=6EE7F7&strokeWidth=2" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=800&color=6EE7F7&center=true&vCenter=true&width=750&lines=AI+%26+Machine+Learning+Engineer;Computer+Vision+Specialist;LLM+%2F+RAG+%2F+Voice+Agent+Builder;10+Projects+shipped+%E2%80%94+all+runnable+Python" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&duration=2600&pause=800&color=6EE7F7&center=true&vCenter=true&width=850&lines=AI+%26+Deep+Learning+Engineer;Specializing+in+Real-Time+Vision+%26+Autonomous+Agents;Building+Sub-500ms+Voice+Pipelines+with+LiveKit+%26+Groq;Zero-Hallucination+RAG+Architectures+with+Qdrant;10+Shipped+Projects+%E2%80%A2+100%25+Runnable+Code" alt="Typing SVG" />
 
 <br/><br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=ALIKAZMI001&color=6EE7F7&style=for-the-badge&label=PROFILE+VIEWS)
-[![GitHub followers](https://img.shields.io/github/followers/ALIKAZMI001?style=for-the-badge&color=3B82F6&labelColor=0D1117&logo=github&label=Followers)](https://github.com/ALIKAZMI001)
-[![GitHub Stars](https://img.shields.io/github/stars/ALIKAZMI001?style=for-the-badge&color=FFD700&labelColor=0D1117&logo=github&label=Stars)](https://github.com/ALIKAZMI001)
+![Profile Views](https://komarev.com/ghpvc/?username=ALIKAZMI001&color=6EE7F7&style=for-the-badge&label=PORTFOLIO+VIEWS)
+&nbsp;
+[![GitHub followers](https://img.shields.io/github/followers/ALIKAZMI001?style=for-the-badge&color=3B82F6&labelColor=0D1117&logo=github&label=Followers)](https://github.com/ALIKAZMI001?tab=followers)
+&nbsp;
+[![GitHub Stars](https://img.shields.io/github/stars/ALIKAZMI001?style=for-the-badge&color=FFD700&labelColor=0D1117&logo=github&label=Total%20Stars)](https://github.com/ALIKAZMI001)
 
 </div>
 
 ---
 
-<img align="right" alt="Coding" width="380" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"/>
+<img align="right" alt="AI Engineer" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"/>
 
-### 👋 About Me
+### 👨‍💻 Executive Summary
 
 ```python
 class AliKazmi:
-    name     = "Ali Kazmi"
-    role     = "AI & Machine Learning Engineer"
-    location = "Pakistan 🇵🇰"
-    
-    focus = [
-        "Computer Vision",
-        "LLMs & Fine-tuning",
-        "RAG Pipelines",
-        "Real-time Voice Agents",
-    ]
-    
-    projects_shipped = 10
-    lines_of_ai_code = "a lot"
-    
-    def currently_building(self):
-        return "Real-time AI systems that actually work"
+    """
+    AI / Machine Learning Engineer dedicated to shipping robust,
+    real-time perceptual systems and autonomous conversational agents.
+    """
+    def __init__(self):
+        self.name = "Ali Kazmi"
+        self.location = "Pakistan 🇵🇰"
+        self.primary_focus = [
+            "Real-Time Multimodal Voice Agents (LiveKit / WebRTC)",
+            "Grounded Enterprise RAG & Vector Search (Qdrant)",
+            "High-Throughput Edge Vision (YOLOv8, MediaPipe, OpenCV)",
+            "Transformer Fine-Tuning (BERT, T5, PyTorch)"
+        ]
+        self.shipped_projects = 10
+        self.clean_architecture = True
+
+    def build(self):
+        return "End-to-End AI that works in production, not just notebooks."
 ```
 
 <br clear="right"/>
@@ -48,64 +52,57 @@ class AliKazmi:
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=ALIKAZMI001&theme=tokyonight&no-bg=true&no-frame=true&margin-w=8&margin-h=8&column=7" width="100%"/>
+<img src="https://github-profile-trophy.vercel.app/?username=ALIKAZMI001&theme=tokyonight&no-bg=true&no-frame=true&margin-w=6&margin-h=6&column=7" width="100%"/>
 
 </div>
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Arsenals
 
 <div align="center">
 
-**Languages & Core**
-
-<img src="https://skillicons.dev/icons?i=python,cpp,bash&perline=10" />
-
-<br/><br/>
-
-**AI / ML Frameworks**
-
-<img src="https://skillicons.dev/icons?i=tensorflow,pytorch,opencv,sklearn&perline=10" />
+**Languages & Foundations**  
+<img src="https://skillicons.dev/icons?i=python,cpp,bash,linux,git,github&perline=6" />
 
 <br/><br/>
 
-**Tools & Infrastructure**
+**Deep Learning & Perceptual Computing**  
+<img src="https://skillicons.dev/icons?i=tensorflow,pytorch,opencv,sklearn&perline=6" />
 
-<img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,jupyter&perline=10" />
+<br/><br/>
+
+**Deployment, Cloud & Tools**  
+<img src="https://skillicons.dev/icons?i=docker,githubactions,vscode,jupyter&perline=6" />
 
 </div>
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Flagship Portfolio Repository
 
 <div align="center">
 
-<a href="https://github.com/ALIKAZMI001/Projects/tree/main/ai-agents/livekit-trip-agent">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ALIKAZMI001&repo=Projects&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6EE7F7&icon_color=3B82F6&text_color=ffffff&description_lines_count=3" />
-</a>
+### [👉 View the Complete 10-Project Showcase in ALIKAZMI001/Projects](https://github.com/ALIKAZMI001/Projects)
+
+| Project | Highlight | Stack |
+|---|---|---|
+| ✈️ **[LiveKit Trip Agent](https://github.com/ALIKAZMI001/Projects/tree/main/livekit-trip-agent)** | Sub-500ms duplex voice assistant querying live flights & weather | `LiveKit` `Groq LLaMA 3.3` `Cartesia` `Docker` |
+| 📄 **[RAG PDF Chatbot](https://github.com/ALIKAZMI001/Projects/tree/main/rag-pdf-chatbot)** | Strict grounded question-answering with zero hallucination | `LangChain` `Qdrant Vector DB` `all-MiniLM` |
+| 🎙️ **[Urdu Voice Assistant](https://github.com/ALIKAZMI001/Projects/tree/main/urdu-voice-assistant)** | End-to-end Urdu speech-to-speech loop with hardware fallback | `SpeechRecognition` `Mistral 7B` `gTTS` |
+| 🏏 **[LLM Fine-Tuning](https://github.com/ALIKAZMI001/Projects/tree/main/llm-finetuning)** | Task-specific adaptation of BERT on GLUE & T5 for domain Q&A | `Hugging Face` `PyTorch` `Transformers` |
+| 🎯 **[YOLOv8 Detection](https://github.com/ALIKAZMI001/Projects/tree/main/yolo-face-detection)** | Self-captured dataset fine-tuned on YOLOv8n at 42+ FPS | `Ultralytics` `MediaPipe` `OpenCV` |
+| 🎂 **[Age & Gender CNN](https://github.com/ALIKAZMI001/Projects/tree/main/age-gender-estimation)** | Multi-task dual-head convolutional network trained on IMDB-WIKI | `TensorFlow` `Keras` `OpenCV` |
+| 🪪 **[Face Recognition](https://github.com/ALIKAZMI001/Projects/tree/main/face-recognition)** | Deep metric vs classical KNN benchmark with complete Tkinter UI | `scikit-learn` `Keras` `Tkinter` |
+| 🙌 **[Gesture Attendance](https://github.com/ALIKAZMI001/Projects/tree/main/gesture-attendance)** | Contactless attendance automation syncing straight into Excel | `MediaPipe` `openpyxl` `OpenCV` |
+| 🖱️ **[Virtual Mouse](https://github.com/ALIKAZMI001/Projects/tree/main/virtual-mouse)** | Sub-20ms hand-tracking cursor control with click gestures | `PyAutoGUI` `MediaPipe` `OpenCV` |
+| 🎮 **[Gesture Game Control](https://github.com/ALIKAZMI001/Projects/tree/main/gesture-game-control)** | Real-time spatial gesture mapping for bundled Unity WebGL game | `Unity WebGL` `MediaPipe` `PyAutoGUI` |
 
 </div>
 
-<br/>
-
-| 🔥 Project | 💡 What it does |
-|---|---|
-| ✈️ **[LiveKit Trip Agent](https://github.com/ALIKAZMI001/Projects/tree/main/ai-agents/livekit-trip-agent)** | Real-time voice AI — live flights, weather & booking in one conversation |
-| 📄 **[RAG PDF Chatbot](https://github.com/ALIKAZMI001/Projects/tree/main/llm/rag-pdf-chatbot)** | Ask questions about any PDF — grounded answers, zero hallucination |
-| 🎙️ **[Urdu Voice Assistant](https://github.com/ALIKAZMI001/Projects/tree/main/llm/urdu-voice-assistant)** | Full Urdu speech → LLM → Urdu speech loop |
-| 🏏 **[LLM Fine-tuning](https://github.com/ALIKAZMI001/Projects/tree/main/llm/llm-finetuning)** | BERT on GLUE + T5 cricket Q&A chatbot from scratch |
-| 🎯 **[YOLOv8 Face Detection](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/yolo-face-detection)** | Self-captured dataset → fine-tuned YOLOv8n detector |
-| 🎂 **[Age & Gender Estimation](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/age-gender-estimation)** | Dual-head CNN — live webcam age & gender prediction |
-| 🖱️ **[Virtual Mouse](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/virtual-mouse)** | Control your PC cursor with just your hand |
-| 🎮 **[Gesture Game Control](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/gesture-game-control)** | Play a Unity game entirely with hand gestures |
-| 🙌 **[Gesture Attendance](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/gesture-attendance)** | Thumbs-up/down → marks attendance in Excel |
-| 🪪 **[Face Recognition](https://github.com/ALIKAZMI001/Projects/tree/main/computer-vision/face-recognition)** | CNN vs KNN side-by-side in a Tkinter desktop app |
-
 ---
 
-## 📊 GitHub Stats
+## 📊 Analytics & Commits
 
 <div align="center">
 
@@ -121,7 +118,7 @@ class AliKazmi:
 
 ---
 
-## 📈 Contribution Activity
+## 📈 Real-Time Contribution Activity
 
 <div align="center">
 
@@ -133,16 +130,16 @@ class AliKazmi:
 
 <div align="center">
 
-### 💬 Let's Connect
+### 🤝 Let's Connect & Collaborate
 
-*Open to collaborations, research projects, and opportunities in AI/ML*
+*I'm always open to discussing cutting-edge AI architectures, research opportunities, and production engineering.*
 
-[![Portfolio Repo](https://img.shields.io/badge/🗂️%20Portfolio%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ALIKAZMI001/Projects)
-[![Email](https://img.shields.io/badge/📬%20Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
+[![Portfolio](https://img.shields.io/badge/🗂️%20Main%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ALIKAZMI001/Projects)
+[![Email](https://img.shields.io/badge/📬%20Get%20in%20Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alikazmi@example.com)
 
 <br/>
 
-*"The best way to predict the future is to build it." — Alan Kay*
+*"The future belongs to those who build it."*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302B63,100:0F0C29&height=120&section=footer" width="100%"/>
 

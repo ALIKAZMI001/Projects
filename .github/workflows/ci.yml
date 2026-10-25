@@ -9,7 +9,7 @@ on:
 
 jobs:
   syntax-check:
-    name: Python syntax check
+    name: Python Syntax Verification
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,22 +18,22 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Compile every Python file
+      - name: Compile all Python files
         run: |
           python -m compileall -q . -x '(/\.git/|/\.venv/|/node_modules/)'
-          echo "All Python files compile."
+          echo "All Python source files pass syntax compilation."
 
   docs-check:
-    name: Markdown links
+    name: Project README Verification
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify every README is present
+      - name: Verify every project folder has a README
         run: |
           missing=0
-          for dir in computer-vision/* llm/* ai-agents/*; do
-            if [ -d "$dir" ] && [ ! -f "$dir/README.md" ]; then
+          for dir in */; do
+            if [ "$dir" != ".github/" ] && [ -d "$dir" ] && [ ! -f "$dir/README.md" ]; then
               echo "::error::Missing README.md in $dir"
               missing=1
             fi
