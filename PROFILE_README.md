@@ -1,26 +1,24 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,40:302B63,100:24243e&height=260&section=header&text=Ali%20Kazmi&fontSize=86&fontColor=ffffff&fontAlignY=38&desc=Autonomous%20AI%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20LLM%20Systems&descAlignY=60&descSize=26&animation=fadeIn&stroke=6EE7F7&strokeWidth=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0C29,40:302B63,100:24243e&height=240&section=header&text=Ali%20Kazmi&fontSize=82&fontColor=ffffff&fontAlignY=38&desc=Applied%20AI%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20LLM%20Systems&descAlignY=60&descSize=26&animation=fadeIn&stroke=6EE7F7&strokeWidth=2" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&duration=2600&pause=800&color=6EE7F7&center=true&vCenter=true&width=850&lines=AI+%26+Deep+Learning+Engineer;Specializing+in+Real-Time+Vision+%26+Autonomous+Agents;Building+Sub-500ms+Voice+Pipelines+with+LiveKit+%26+Groq;Zero-Hallucination+RAG+Architectures+with+Qdrant;10+Shipped+Projects+%E2%80%A2+100%25+Runnable+Code" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&duration=2600&pause=800&color=6EE7F7&center=true&vCenter=true&width=800&lines=AI+%26+Deep+Learning+Engineer;Specializing+in+Real-Time+Vision+%26+Autonomous+Agents;Building+Sub-500ms+Voice+Pipelines+with+LiveKit+%26+Groq;Zero-Hallucination+RAG+Architectures+with+Qdrant;10+Shipped+Projects+%E2%80%A2+100%25+Runnable+Code" alt="Typing SVG" />
 
 <br/><br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=ALIKAZMI001&color=6EE7F7&style=for-the-badge&label=PORTFOLIO+VIEWS)
-&nbsp;
 [![GitHub followers](https://img.shields.io/github/followers/ALIKAZMI001?style=for-the-badge&color=3B82F6&labelColor=0D1117&logo=github&label=Followers)](https://github.com/ALIKAZMI001?tab=followers)
 &nbsp;
 [![GitHub Stars](https://img.shields.io/github/stars/ALIKAZMI001?style=for-the-badge&color=FFD700&labelColor=0D1117&logo=github&label=Total%20Stars)](https://github.com/ALIKAZMI001)
+&nbsp;
+[![Portfolio](https://img.shields.io/badge/Main%20Portfolio-Projects-6EE7F7?style=for-the-badge&logo=github&logoColor=black)](https://github.com/ALIKAZMI001/Projects)
 
 </div>
 
 ---
 
-<img align="right" alt="AI Engineer" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"/>
-
-### 👨‍💻 Executive Summary
+### 👨‍💻 About Me
 
 ```python
 class AliKazmi:
@@ -37,28 +35,15 @@ class AliKazmi:
             "High-Throughput Edge Vision (YOLOv8, MediaPipe, OpenCV)",
             "Transformer Fine-Tuning (BERT, T5, PyTorch)"
         ]
-        self.shipped_projects = 10
-        self.clean_architecture = True
+        self.portfolio_projects = 10
 
     def build(self):
-        return "End-to-End AI that works in production, not just notebooks."
+        return "End-to-End AI systems that perform in production, not just notebooks."
 ```
 
-<br clear="right"/>
-
 ---
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=ALIKAZMI001&theme=tokyonight&no-bg=true&no-frame=true&margin-w=6&margin-h=6&column=7" width="100%"/>
-
-</div>
-
----
-
-## 🛠️ Technology Arsenals
+## 🛠️ Technical Arsenal
 
 <div align="center">
 
@@ -79,11 +64,9 @@ class AliKazmi:
 
 ---
 
-## 🚀 Flagship Portfolio Repository
+## 🚀 Featured Portfolio Projects
 
-<div align="center">
-
-### [👉 View the Complete 10-Project Showcase in ALIKAZMI001/Projects](https://github.com/ALIKAZMI001/Projects)
+All 10 projects are available with setup guides and runnable code in **[ALIKAZMI001/Projects](https://github.com/ALIKAZMI001/Projects)**:
 
 | Project | Highlight | Stack |
 |---|---|---|
@@ -98,11 +81,9 @@ class AliKazmi:
 | 🖱️ **[Virtual Mouse](https://github.com/ALIKAZMI001/Projects/tree/main/virtual-mouse)** | Sub-20ms hand-tracking cursor control with click gestures | `PyAutoGUI` `MediaPipe` `OpenCV` |
 | 🎮 **[Gesture Game Control](https://github.com/ALIKAZMI001/Projects/tree/main/gesture-game-control)** | Real-time spatial gesture mapping for bundled Unity WebGL game | `Unity WebGL` `MediaPipe` `PyAutoGUI` |
 
-</div>
-
 ---
 
-## 📊 Analytics & Commits
+## 📊 Analytics & Activity
 
 <div align="center">
 
@@ -114,13 +95,7 @@ class AliKazmi:
 
 <img src="https://streak-stats.demolab.com?user=ALIKAZMI001&theme=tokyonight&hide_border=true&background=0D1117&ring=6EE7F7&fire=3B82F6&currStreakLabel=6EE7F7&sideLabels=ffffff&dates=888888" width="60%"/>
 
-</div>
-
----
-
-## 📈 Real-Time Contribution Activity
-
-<div align="center">
+<br/><br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/api?username=ALIKAZMI001&theme=tokyo-night&bg_color=0D1117&color=6EE7F7&line=3B82F6&point=ffffff&area=true&hide_border=true" width="100%"/>
 
@@ -130,9 +105,7 @@ class AliKazmi:
 
 <div align="center">
 
-### 🤝 Let's Connect & Collaborate
-
-*I'm always open to discussing cutting-edge AI architectures, research opportunities, and production engineering.*
+### 🤝 Let's Connect
 
 [![Portfolio](https://img.shields.io/badge/🗂️%20Main%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ALIKAZMI001/Projects)
 [![Email](https://img.shields.io/badge/📬%20Get%20in%20Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alikazmi@example.com)
