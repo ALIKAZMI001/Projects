@@ -4,8 +4,6 @@ Multi-task CNN that predicts **gender (2 classes)** and **age (regression)** fro
 single face crop. Trained on the [IMDB-WIKI](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/)
 face dataset.
 
-<!-- Add a screenshot / GIF of predict_webcam.py here — see README notes at repo root. -->
-
 ## What's implemented
 
 - **Joint model** — one shared convolutional trunk with two heads

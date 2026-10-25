@@ -6,7 +6,7 @@ the CNN generalises, the KNN baseline is instant to train.
 
 | | `cnn/` | `knn/` |
 | --- | --- | --- |
-| Model | Keras CNN (224×224, 3-class) | KNN, k=5, on raw 50×50 pixels |
+| Model | Keras CNN (224×224, 2 classes + unknown fallback) | KNN, k=5, on raw 50×50 pixels |
 | Training | Transfer-style training on collected images | Fits in-memory at startup |
 | Input | Face crop → 224×224 → `/255` | Face crop → 50×50 → flatten (7 500 features) |
 | Strength | Handles lighting/pose variation | No training step, trivial to extend |

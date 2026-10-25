@@ -89,7 +89,8 @@ Projects that call hosted APIs read their keys from environment variables — co
 - The age/gender project ships the IMDB-WIKI face crops it was trained on, which is
   why that folder is large. Cite the [IMDB-WIKI dataset](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/)
   if you reuse it.
-- Webcam capture scripts write new images locally; see each `.gitignore`.
+- Webcam capture scripts write new images locally into their own project folders;
+  generated media and caches are covered by the root `.gitignore`.
 
 ## License
 
