@@ -1,0 +1,8 @@
+langchain>=0.2
+langchain-community>=0.2
+langchain-huggingface>=0.0.3
+langchain-openai>=0.1
+langchain-text-splitters>=0.2
+qdrant-client>=1.9
+sentence-transformers>=2.7
+pypdf>=4.2

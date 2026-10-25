@@ -1,0 +1,27 @@
+# Normalise line endings; keep binaries untouched.
+* text=auto eol=lf
+
+*.py     text diff=python
+*.md     text
+*.yml    text
+*.yaml   text
+*.json   text
+*.toml   text
+*.txt    text
+
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.pdf    binary
+*.h5     binary
+*.pt     binary
+*.pkl    binary
+*.mat    binary
+*.sqlite binary
+*.xlsx   binary
+*.dll    binary
+*.exe    binary
+*.assets binary
+*.resS   binary
+*.resource binary

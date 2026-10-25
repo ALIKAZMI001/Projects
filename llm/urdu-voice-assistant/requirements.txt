@@ -1,0 +1,4 @@
+SpeechRecognition>=3.10
+googletrans==4.0.0rc1
+gTTS>=2.5
+requests>=2.31

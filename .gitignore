@@ -1,0 +1,39 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Secrets / local config ----
+.env
+.env.*
+!.env.example
+*.pem
+conversation_log.csv
+
+# ---- Generated media ----
+urdu_input.wav
+response.mp3
+
+# ---- Model / dataset caches ----
+*.cache
+runs/*/predict*/
+wandb/
+lightning_logs/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

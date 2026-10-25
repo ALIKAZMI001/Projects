@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Trip Agent Console</title>
+<script src="https://cdn.jsdelivr.net/npm/livekit-client@2.21.0/dist/livekit-client.umd.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* layout: scrolling transcript on top (the main content), connection controls pinned below */
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --border: #e4e0d8;
+    --ink: #1f1d1a;
+    --muted: #726d62;
+    --accent: #b5633a;
+    --accent-soft: #f3e4da;
+    --you-bg: #eef1ec;
+    --agent-bg: #fbeee4;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1915; --surface: #242019; --border: #3a342a; --ink: #f0ebe2; --muted: #a89d8a;
+      --accent: #e08a5b; --accent-soft: #3a2a1f; --you-bg: #263024; --agent-bg: #322820;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1915; --surface: #242019; --border: #3a342a; --ink: #f0ebe2; --muted: #a89d8a;
+    --accent: #e08a5b; --accent-soft: #3a2a1f; --you-bg: #263024; --agent-bg: #322820;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    padding-inline: 16px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  h1 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin: 0; text-wrap: balance; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 2px; }
+
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+
+  #transcriptPanel { flex: 1; display: flex; flex-direction: column; min-height: 0; min-height: 300px; }
+  #transcript {
+    flex: 1;
+    min-height: 300px;
+    height: 300px;
+    max-height: 50vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .empty-state { color: var(--muted); font-size: 0.9rem; text-align: center; padding: 40px 10px; margin: auto; }
+  .bubble { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.92rem; line-height: 1.45; min-width: 0; word-wrap: break-word; color: #1f1d1a; background: #fff; border: 1px solid #e4e0d8; }
+  .bubble .who { font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: #0b4d1a; font-weight: 700; margin-bottom: 3px; }
+  .bubble.you { align-self: flex-end; background: #eef1ec; border-bottom-right-radius: 3px; }
+  .bubble.agent { align-self: flex-start; background: #fbeee4; border-bottom-left-radius: 3px; }
+  .bubble .body { color: #0b4d1a; font-weight: 600; font-size: 1rem; }
+  @media (prefers-color-scheme: dark) {
+    /* keep bubbles light so the dark green text stays readable */
+    .bubble { background: #ffffff; border-color: #c9d6c9; }
+    .bubble.you { background: #eef1ec; }
+    .bubble.agent { background: #fbeee4; }
+  }
+
+  #connPanel { display: flex; flex-direction: column; gap: 10px; }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  button {
+    font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+    padding: 10px 18px; border-radius: 999px; border: none; cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+  button:active { transform: scale(0.97); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: var(--accent-soft); color: var(--accent); }
+
+  .status-row { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
+  .dot.live { background: #4caf7d; }
+  .dot.error { background: #d4594a; }
+
+  footer { font-size: 0.75rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Trip Agent Console</h1>
+  <div class="subtitle">Talk to your LiveKit trip-planning agent and watch the transcript live.</div>
+</header>
+
+<section class="panel" id="transcriptPanel">
+  <div id="transcript">
+    <div class="empty-state" id="emptyState">Your conversation will appear here once connected.</div>
+  </div>
+</section>
+
+<section class="panel" id="connPanel">
+  <div class="btn-row">
+    <button class="btn-primary" id="connectBtn">Connect &amp; talk</button>
+    <button class="btn-secondary" id="disconnectBtn" disabled>Disconnect</button>
+  </div>
+  <div class="status-row"><span class="dot" id="statusDot"></span><span id="statusText">Not connected</span></div>
+</section>
+
+<footer>Audio only plays after you click Connect — browsers require a click before sound starts.</footer>
+
+<script>
+(function () {
+  const { Room, RoomEvent, Track } = LivekitClient;
+
+  const SERVER_URL = 'wss://ai-voice-agent-tje4wxsl.livekit.cloud';
+  const ROOM_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUElDeTVOOWpVY29rNlAiLCJzdWIiOiJ1c2VyIiwiZXhwIjoxODIzMTgyOTY4LCJuYmYiOjE3OTE2NDY5NjgsImlhdCI6MTc5MTY0Njk2OCwiaWRlbnRpdHkiOiJ1c2VyIiwibmFtZSI6InVzZXIiLCJ2aWRlbyI6eyJyb29tSm9pbiI6dHJ1ZSwicm9vbSI6InRyaXAtcm9vbS12MiJ9fQ.59dJl5TM-AB-TUtaPk2iDiwxGGIWpwLdMklpw2_aRV8';
+
+  const connectBtn = document.getElementById('connectBtn');
+  const disconnectBtn = document.getElementById('disconnectBtn');
+  const statusDot = document.getElementById('statusDot');
+  const statusText = document.getElementById('statusText');
+  const transcriptEl = document.getElementById('transcript');
+  const emptyState = document.getElementById('emptyState');
+
+  let room = null;
+  const segments = {};
+
+  function setStatus(text, mode) {
+    statusText.textContent = text;
+    statusDot.className = 'dot' + (mode ? ' ' + mode : '');
+  }
+
+  function ensureBubble(segmentId, speaker) {
+    if (segments[segmentId]) return segments[segmentId];
+    if (emptyState) emptyState.remove();
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble ' + speaker + ' interim';
+    const who = document.createElement('div');
+    who.className = 'who';
+    who.textContent = speaker === 'you' ? 'You' : 'Agent';
+    const body = document.createElement('div');
+    body.className = 'body';
+    bubble.appendChild(who);
+    bubble.appendChild(body);
+    transcriptEl.appendChild(bubble);
+    segments[segmentId] = bubble;
+    return bubble;
+  }
+
+  function scrollToBottom() {
+    transcriptEl.scrollTop = transcriptEl.scrollHeight;
+  }
+
+  async function connect() {
+    const url = SERVER_URL;
+    const token = ROOM_TOKEN;
+
+    connectBtn.disabled = true;
+    setStatus('Connecting...', '');
+
+    room = new Room();
+
+    room.on(RoomEvent.TrackSubscribed, (track) => {
+      if (track.kind === Track.Kind.Audio) {
+        const el = track.attach();
+        el.autoplay = true;
+        document.body.appendChild(el);
+      }
+    });
+
+    room.on(RoomEvent.Disconnected, () => {
+      setStatus('Disconnected', '');
+      connectBtn.disabled = false;
+      disconnectBtn.disabled = true;
+    });
+
+    room.registerTextStreamHandler('lk.transcription', async (reader, participantInfo) => {
+      const attrs = reader.info.attributes || {};
+      if (!attrs['lk.transcribed_track_id']) return;
+
+      const segmentId = attrs['lk.segment_id'] || reader.info.id;
+      const isFinal = attrs['lk.transcription_final'] === 'true';
+      const speaker = participantInfo.identity === room.localParticipant.identity ? 'you' : 'agent';
+
+      const bubble = ensureBubble(segmentId, speaker);
+      const body = bubble.querySelector('.body');
+      let accumulatedText = '';
+
+      try {
+        // TextStreamReader is an async iterator: each chunk is a plain string
+        for await (const chunk of reader) {
+          accumulatedText += chunk;
+          body.textContent = accumulatedText;
+          scrollToBottom();
+        }
+        console.log(`Transcript (${speaker}): "${accumulatedText}"`);
+      } catch (err) {
+        console.error('Transcription stream error:', err);
+      }
+
+      if (!accumulatedText.trim() && !body.textContent.trim()) {
+        body.textContent = '[no speech detected]';
+      }
+      bubble.classList.toggle('interim', !isFinal);
+      scrollToBottom();
+    });
+
+    try {
+      await room.connect(url, token);
+      setStatus('Connected — publishing mic...', 'live');
+
+      const micTrack = await LivekitClient.createLocalAudioTrack();
+      await room.localParticipant.publishTrack(micTrack);
+
+      setStatus('Live — speak anytime', 'live');
+      disconnectBtn.disabled = false;
+    } catch (err) {
+      setStatus('Connection failed: ' + err.message, 'error');
+      connectBtn.disabled = false;
+    }
+  }
+
+  connectBtn.addEventListener('click', connect);
+  disconnectBtn.addEventListener('click', () => {
+    if (room) room.disconnect();
+  });
+})();
+</script>
+</body>
+</html>
