@@ -14,8 +14,11 @@ import time
 
 import requests
 import speech_recognition as sr
+from dotenv import load_dotenv
 from googletrans import Translator
 from gtts import gTTS
+
+load_dotenv()  # picks up OPENROUTER_API_KEY from a local .env, if present
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "mistralai/mistral-7b-instruct"

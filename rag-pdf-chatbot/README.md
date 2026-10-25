@@ -44,6 +44,9 @@ $env:OPENROUTER_API_KEY="sk-or-..."
 python app.py
 ```
 
+Or put it in a `.env` file in this folder (`OPENROUTER_API_KEY=sk-or-...`) — it is
+loaded automatically via `python-dotenv`.
+
 ## Usage
 
 ```

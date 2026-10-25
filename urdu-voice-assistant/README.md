@@ -29,15 +29,17 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Provide your OpenRouter key — it is read from the environment, never hardcoded:
+Provide your OpenRouter key — it is read from the environment, never hardcoded.
+Either drop it in a `.env` file next to the scripts:
+
+```ini
+OPENROUTER_API_KEY=sk-or-...
+```
+
+or export it in your shell:
 
 ```powershell
 $env:OPENROUTER_API_KEY="sk-or-..."
-python urdu_to_urdu.py
-```
-
-```bash
-export OPENROUTER_API_KEY="sk-or-..."
 python urdu_to_urdu.py
 ```
 

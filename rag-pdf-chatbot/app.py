@@ -22,6 +22,9 @@ from langchain_community.vectorstores import Qdrant
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from dotenv import load_dotenv
+
+load_dotenv()  # picks up OPENROUTER_API_KEY from a local .env, if present
 
 BASE_DIR = Path(__file__).resolve().parent
 PDF_PATH = BASE_DIR / "docs" / "book.pdf"
